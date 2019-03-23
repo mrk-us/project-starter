@@ -1,0 +1,20 @@
+.NewProjectButton {
+  position: absolute;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  right: 32px;
+  bottom: 0;
+  padding: 12px 0;
+  outline: 0;
+  background: transparent;
+  color: #8C56D4;
+  border: none;
+  border-radius: 28px;
+  font-size: 14px;
+  line-height: 9px;
+}
+
+.NewProjectButton:hover {
+  color: white;
+}
