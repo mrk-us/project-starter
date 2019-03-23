@@ -1,0 +1,27 @@
+.NameProject {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin: 8px 0;
+  text-align: left;
+  font-size: 18px;
+  border: 0;
+  color: white;
+  background: transparent;
+  margin: 24px 0 48px 0;
+  border-bottom: 1px solid transparent;
+}
+
+.NameProject::placeholder {
+  color: #8C56D4;
+}
+
+.NameProject:focus {
+  outline: none;
+  border-bottom: 1px solid #8C56D4;
+}
+
+.NameProject:focus::placeholder {
+  color: white;
+}
