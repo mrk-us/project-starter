@@ -1,0 +1,9 @@
+.ToolBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 100%;
+  top: 0;
+}
