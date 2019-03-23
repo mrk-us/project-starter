@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import DEFAULT_TAGS from '../config'
 import TitleBar from '../Components/TitleBar/TitleBar'
 import ToolBar from '../Components/ToolBar/ToolBar'
 import './App.css'
@@ -6,7 +7,9 @@ import './App.css'
 export default class App extends Component {
   constructor(props) {
     super(props)
-    this.state = {}
+    this.state = {
+      tags: DEFAULT_TAGS
+    }
   }
 
   render() {
