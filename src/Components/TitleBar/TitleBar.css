@@ -1,0 +1,10 @@
+.TitleBar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 64px;
+  width: 100%;
+  top: 0;
+  -webkit-app-region: drag;
+}
