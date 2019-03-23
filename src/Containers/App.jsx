@@ -18,6 +18,13 @@ export default class App extends Component {
 
   addTagSwitchHandler = () => this.setState({switch: !this.state.switch})
 
+  addTagHandler = event => {
+    const setTags = [...this.state.tags, event.target.value]
+    this.setState({
+      tags: setTags
+    })
+  }
+
   render() {
     return (
       <div className='App'>
@@ -26,7 +33,8 @@ export default class App extends Component {
         <TagList defaultTags={this.state.tags} />
         <AddTag
           switch={this.state.switch}
-          handleSwitch={() => this.addTagSwitchHandler()} />
+          handleSwitch={this.addTagSwitchHandler}
+          handleAdd={() => this.addTagHandler(event)}/>
       </div>
     )
   }

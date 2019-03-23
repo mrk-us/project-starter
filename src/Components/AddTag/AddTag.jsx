@@ -8,7 +8,13 @@ const AddTag = (props) => {
         className='InputTag'
         type='text'
         autoFocus
-        onBlur={props.handleSwitch} />
+        onBlur={props.handleSwitch}
+        onKeyPress={event => {
+          if (event.key === 'Enter') {
+            {props.handleAdd(event.target.value)}
+            event.target.value = ''
+          }
+        }} />
     :
       <button
         className='AddTag'
