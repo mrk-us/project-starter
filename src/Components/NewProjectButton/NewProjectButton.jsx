@@ -4,7 +4,7 @@ import './NewProjectButton.css'
 const NewProjectButton = () => {
   return (
     <button className='NewProjectButton'>
-      Create New
+      Create New Project
     </button>
   )
 }
