@@ -1,0 +1,17 @@
+.ProjectLocation {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 12px 0;
+  margin: 8px 0;
+  text-align: left;
+  font-size: inherit;
+  border: 0;
+  color: #8C56D4;
+  background: transparent;
+  margin: 24px 0 48px 0;
+}
+
+.ProjectLocation:focus {
+  outline: none;
+}
