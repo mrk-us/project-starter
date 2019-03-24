@@ -1,7 +1,7 @@
 import React from 'react'
 import './NameProject.css'
 
-const NameProject = () => {
+const NameProject = props => {
   return (
     <input
       placeholder='Name your project'
@@ -9,7 +9,8 @@ const NameProject = () => {
       className='NameProject'
       tabIndex='1'
       autoFocus
-      onKeyPress={`// next tab`} />
+      onKeyPress={`// next tab`}
+      onChange={event => props.change(event.target.value)} />
   )
 }
 
