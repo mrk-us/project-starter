@@ -1,7 +1,5 @@
 .TagList {
   width: 100%;
-  max-height: 331px;
-  -webkit-overflow-y: scroll;
 }
 
 .TagList > span {
@@ -19,6 +17,10 @@
   border: 1px solid #8C56D4;
   border-radius: 4px;
   transition: 0.2s;
+}
+
+.TagListItem:last-of-type {
+  margin-bottom: 0;
 }
 
 .TagListItem:focus {

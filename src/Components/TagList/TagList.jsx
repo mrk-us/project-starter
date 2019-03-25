@@ -5,6 +5,18 @@ import './TagList.css'
 
 const TagList = props => {
   let removeTag = null
+  let addTag = null
+
+  props.defaultTags.length < 5 ?
+    addTag = (
+      <AddTag
+        buttonSwitch={props.buttonSwitch}
+        handleSwitch={props.handleSwitch}
+        handleAdd={props.handleAdd} />
+    )
+  :
+      addTag = null
+
   return (
     <div className='TagList'>
       <span>Target platform</span>
@@ -40,10 +52,7 @@ const TagList = props => {
             null}
         </label>
       ))}
-      <AddTag
-        buttonSwitch={props.buttonSwitch}
-        handleSwitch={props.handleSwitch}
-        handleAdd={props.handleAdd} />
+      {addTag}
     </div>
   )
 }
