@@ -10,6 +10,7 @@
   font-size: inherit;
   border-radius: 4px;
   overflow: hidden;
+  margin-top: 8px;
 }
 
 .AddTag {
