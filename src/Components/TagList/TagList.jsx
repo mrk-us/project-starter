@@ -22,7 +22,7 @@ const TagList = props => {
         className='EditButton'
         tabIndex='-1'
         onClick={props.editClicked} >
-        edit
+        {props.editHandler ? 'cancel' : 'edit'}
       </button>
       {props.defaultTags.map((tag, index) => (
         <label
