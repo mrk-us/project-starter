@@ -16,7 +16,7 @@
   color: #8C56D4;
 }
 .AddTag:focus {
-  outline: 0;
+  outline: 1px solid #8C56D4;
 }
 
 .InputTag {

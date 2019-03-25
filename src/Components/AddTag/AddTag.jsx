@@ -1,9 +1,9 @@
 import React from 'react'
 import './AddTag.css'
 
-const AddTag = (props) => {
+const AddTag = props => {
   return (
-    props.switch ?
+    props.buttonSwitch ?
       <input
         className='InputTag'
         type='text'
@@ -11,7 +11,7 @@ const AddTag = (props) => {
         onBlur={props.handleSwitch}
         onKeyPress={event => {
           if (event.key === 'Enter') {
-            {props.handleAdd(event.target.value)}
+            {props.handleAdd(event)}
             event.target.value = ''
           }
         }} />
