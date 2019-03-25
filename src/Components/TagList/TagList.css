@@ -1,5 +1,7 @@
 .TagList {
   width: 100%;
+  max-height: 331px;
+  overflow: scroll;
 }
 
 .TagList > span {
@@ -21,7 +23,7 @@
 }
 
 .TagListItem:focus {
-  outline: none;
+  outline: 1px solid #8C56D4;
 }
 
 .TagListItem span {
