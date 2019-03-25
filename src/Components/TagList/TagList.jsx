@@ -1,12 +1,29 @@
 import React from 'react'
 import AddTag from '../AddTag/AddTag'
-import { Check } from 'react-feather'
+import { Check, Minus } from 'react-feather'
 import './TagList.css'
 
 const TagList = props => {
+  let removeTag = null
+  props.editHandler ?
+    removeTag = (
+      <button
+        className='RemoveTag'
+        onClick={props.editClicked}>
+        <Minus />
+      </button>
+    )
+  :
+    null
   return (
     <div className='TagList'>
       <span>Target platform</span>
+      <button
+        className='EditButton'
+        tabIndex='-1'
+        onClick={props.editClicked} >
+        edit
+      </button>
       {props.defaultTags.map((tag, index) => (
         <label
           className='TagListItem'
@@ -23,6 +40,7 @@ const TagList = props => {
             type='checkbox'
             value={tag} />
           <span>{tag}<Check className='Icon'/></span>
+          {removeTag}
         </label>
       ))}
       <AddTag
