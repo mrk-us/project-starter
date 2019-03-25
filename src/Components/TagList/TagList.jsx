@@ -5,16 +5,6 @@ import './TagList.css'
 
 const TagList = props => {
   let removeTag = null
-  props.editHandler ?
-    removeTag = (
-      <button
-        className='RemoveTag'
-        onClick={props.editClicked}>
-        <Minus />
-      </button>
-    )
-  :
-    null
   return (
     <div className='TagList'>
       <span>Target platform</span>
@@ -40,7 +30,14 @@ const TagList = props => {
             type='checkbox'
             value={tag} />
           <span>{tag}<Check className='Icon'/></span>
-          {removeTag}
+          {props.editHandler ?
+            <button
+              className='RemoveTag'
+              onClick={() => props.removeTag(index)}>
+              <Minus />
+            </button>
+          :
+            null}
         </label>
       ))}
       <AddTag

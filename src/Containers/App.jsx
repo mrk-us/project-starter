@@ -19,6 +19,7 @@ export default class App extends Component {
       tags: DEFAULT_TAGS,
       checkedTags: [],
       buttonSwitch: false,
+      tagsEditable: false,
       projectName: '',
       projectLocation: HOME_DIRECTORY
     }
@@ -27,9 +28,9 @@ export default class App extends Component {
   nameHandler = event => this.setState({projectName: event.target.value})
 
   checkedTagsHandler = (event, props) => {
-    let setCheckedTags;
+    let setCheckedTags
     if (event.target.checked) {
-      setCheckedTags = [...this.state.checkedTags, event.target.value];
+      setCheckedTags = [...this.state.checkedTags, event.target.value]
     }
     else {
       setCheckedTags = [...this.state.checkedTags].filter(
@@ -48,6 +49,21 @@ export default class App extends Component {
     const setTags = [...this.state.tags, event.target.value]
     this.setState({
       tags: setTags
+    })
+  }
+
+  editTagsHandler = () => {
+    this.setState({
+      tagsEditable: !this.state.tagsEditable
+    })
+  }
+
+  removeTagHandler = indexToDelete => {
+    let editedTags = [...this.state.tags].filter(
+      index => this.state.tags.indexOf(index) !== indexToDelete
+    )
+    this.setState({
+      tags: editedTags
     })
   }
 
@@ -73,7 +89,10 @@ export default class App extends Component {
           clicked={this.checkedTagsHandler}
           buttonSwitch={this.state.buttonSwitch}
           handleSwitch={this.addTagSwitchHandler}
-          handleAdd={this.addTagHandler} />
+          handleAdd={this.addTagHandler}
+          editHandler={this.state.tagsEditable}
+          editClicked={this.editTagsHandler}
+          removeTag={this.removeTagHandler} />
         <ProjectLocation
           location={this.state.projectLocation}
           name={this.state.projectName}
