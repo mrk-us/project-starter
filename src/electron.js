@@ -6,7 +6,7 @@ const isDev = require('electron-is-dev')
 app.on('ready', () => {
   const mainWindow = new BrowserWindow({
     width: 300,
-    height: 600,
+    height: 670,
     minWidth: 400,
     minHeight: 300,
     frame: false,
