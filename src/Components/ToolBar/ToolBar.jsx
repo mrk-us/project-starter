@@ -1,11 +1,11 @@
 import React from 'react'
-import NewProjectButton from '../NewProjectButton/NewProjectButton'
+import NewProject from '../NewProject/NewProject'
 import './ToolBar.css'
 
 const ToolBar = () => {
   return (
     <div className='ToolBar'>
-      <NewProjectButton />
+      <NewProject />
     </div>
   )
 }
