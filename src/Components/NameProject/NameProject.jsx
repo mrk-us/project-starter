@@ -9,8 +9,7 @@ const NameProject = props => {
       className='NameProject'
       tabIndex='1'
       autoFocus
-      onKeyPress={`// next tab`}
-      onChange={event => props.change(event.target.value)} />
+      onChange={event => props.change(event)} />
   )
 }
 
