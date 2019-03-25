@@ -9,7 +9,7 @@
   border: 0;
   color: #8C56D4;
   background: transparent;
-  margin: 24px 0 48px 0;
+  margin: 0 0 48px 0;
 }
 
 .ProjectLocation:focus {
@@ -19,4 +19,12 @@
 
 .ProjectLocation:hover {
   text-decoration: underline;
+}
+
+.SectionTitle {
+  width: 100%;
+  display: inline-block;
+  color: #8C56D4;
+  margin: 48px 0 8px 0;
+  font-weight: 500;
 }
